@@ -1,4 +1,3 @@
-live link : <a href="https://grione.github.io/react-get-counts/" target="_blank">React Get Counts live</a>
 # React Get Counts
 
 This is a React application that displays count data in a table with pagination. The data is fetched from a remote API, and the table supports deleting rows and dynamically loading addresses based on area IDs.
