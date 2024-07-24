@@ -1,7 +1,7 @@
 import { types } from 'mobx-state-tree';
 
 const Area = types.model('Area', {
-  id: types.string
+  id: types.string,
 });
 
 const Count = types.model('Count', {
@@ -12,7 +12,7 @@ const Count = types.model('Count', {
   initial_values: types.array(types.number),
   area: Area,
   description: types.string,
-  address: types.optional(types.string, "")
+  address: types.optional(types.string, ''),
 });
 
 export default Count;

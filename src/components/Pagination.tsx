@@ -43,7 +43,10 @@ const Pagination: React.FC = observer(() => {
         Previous
       </Button>
       <span>{`Page ${store.currentPage} of ${store.totalPages}`}</span>
-      <Button onClick={handleNext} disabled={store.offset + store.limit >= store.total}>
+      <Button
+        onClick={handleNext}
+        disabled={store.offset + store.limit >= store.total}
+      >
         Next
       </Button>
     </PaginationContainer>
