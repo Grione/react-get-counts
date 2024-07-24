@@ -30,7 +30,7 @@ const RootStore = types
 
     const fetchCounts = flow(function* (offset = 0) {
       try {
-        const response = yield axios.get(`http://showroom.eis24.me/api/v4/test/meters/?limit=${self.limit}&offset=${offset}`);
+        const response = yield axios.get(`https://showroom.eis24.me/api/v4/test/meters/?limit=${self.limit}&offset=${offset}`);
         self.counts = response.data.results;
         self.total = response.data.count;
         self.offset = offset;
