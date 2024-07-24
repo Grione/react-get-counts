@@ -13,7 +13,7 @@ const RootStore = types
   .actions(self => {
     const fetchAddress = flow(function* (areaId: string) {
       try {
-        const response = yield axios.get(`http://showroom.eis24.me/api/v4/test/areas/?id=${areaId}`);
+        const response = yield axios.get(`https://showroom.eis24.me/api/v4/test/areas/?id=${areaId}`);
         const address = response.data.results[0].house.address + ', ' + response.data.results[0].str_number_full;
         self.addresses.set(areaId, address);
 
@@ -50,7 +50,7 @@ const RootStore = types
     const removeCount = flow(function* removeCount(id: string) {
       try {
 
-        yield axios.delete(`http://showroom.eis24.me/api/v4/test/meters/${id}/`)
+        yield axios.delete(`https://showroom.eis24.me/api/v4/test/meters/${id}/`)
         yield fetchCounts(self.offset);
 
       } catch (error) {
